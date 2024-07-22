@@ -1,0 +1,300 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+:root {
+    /* Primary Colors */
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+
+    /*fonts */
+    --Roboto : "Roboto", sans-serif;
+
+    /*font weights */
+    --fw-Regular : 400;
+    --fw-Bold : 700;
+}
+
+
+
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+
+* {
+   margin: 0;
+}
+
+html,body {
+  height: 100vh;
+}
+
+/* Media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+/* Typography reset */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+
+body {
+
+    font-family: var(--Roboto);
+    font-weight: var(--fw-Regular);
+    color: var(--Dark-Slate-Grey);
+    background-color: var(--Charcoal-Grey);
+    height: 100%vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    background-color:var(--White);
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+
+
+.btn {
+    color: var(--White);
+
+    font-weight: var(--fw-Bold);
+    border-style: none;
+    border-radius: 0.5rem;
+    padding: 1.125rem 3rem 0.80rem 3rem;
+    max-width: 327px;
+    background-color: var(--Dark-Slate-Grey);
+}
+
+.newsletter-description {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+   
+}
+
+ul {
+  list-style : none;
+ 
+  padding: 0;
+}
+
+li::before {
+  content : "";
+  background-image: url('./assets/images/icon-success.svg');
+  display:inline-block;
+  background-size: 1.25rem 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1rem;
+}
+
+li {
+  
+  margin-bottom: 8px;
+}
+
+
+/* form styling */
+form  {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.5rem;
+  font-weight: bold;;
+  display: flex;
+  justify-content: space-between;
+}
+
+.email {
+  padding-top:1rem;
+  padding-bottom:1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  
+  color: var(--Grey);
+  border : 1px solid var(--Grey);
+  border-radius: 0.5rem;
+}
+
+   /* form warning */
+form p {
+   color: Red;
+}
+
+
+
+
+
+@media only screen and (max-width: 375px) {
+
+     body {
+      background-color: white;
+     }
+
+     .main-content {
+      margin-top: 9.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 263px;
+     }
+    
+     .main-content a button {
+       width: 327px;
+     }
+
+
+     .success-content {
+           justify-content: center;
+           max-width: 327px;
+           margin: 0 2rem;
+      }
+
+      .success-description {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    
+      .success-description p strong {
+        font-weight: var(--fw-Bold);
+      }
+
+      .success-description h1 {
+        font-size: 2.5rem;
+      }
+
+}
+
+@media only screen and (min-width: 1440px){
+
+  
+    .btn-form:hover{
+     background-color: var(--Tomato);
+     box-shadow: 0rem 0.5rem 1rem var(--Tomato);
+
+    }
+
+    body {
+      align-items: center;
+      justify-content: center;
+    }
+
+    main{
+      flex-direction: row-reverse;
+      max-width: 928px;
+      border-radius: 2.25rem ;
+      padding: 1.5rem 1.5rem 1.5rem 4rem;
+
+
+    }
+    .newsletter-description h1 {
+      font-size: 3.5rem;
+
+    }
+
+
+    section {
+      margin: 0;
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+      max-width: 376px;
+    }
+ 
+    .btn {
+      max-width: 376px;
+    }
+
+
+    .btn-dismiss:hover{
+      background-color: var(--Tomato);
+      box-shadow: 0rem 0.5rem 1rem var(--Tomato);
+
+    }
+
+    /*sucess-content*/
+   .main-desktop {
+    padding: 4rem;
+    max-width: 504px;
+   }
+
+   .success-content {
+    padding: 0;
+   }
+
+   .main-content{
+     display: flex;
+     flex-direction: column;
+     gap: 2.5rem;
+   }
+
+   .success-description {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem
+   }
+
+   .success-description h1 {
+     font-size: 3.5rem;
+    }
+
+
+    .success-description p{
+      line-height: 1.5rem;
+     }
+
+     .btn-dismiss {
+       width: 376px;
+     }
+}

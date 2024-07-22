@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="main.css" />
+  <script defer src="script.js"></script>
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+
+
+ <main>
+     <picture>
+         <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1440px)" >
+         <img src="assets/images/illustration-sign-up-mobile.svg" alt="newsletter signup image"/>
+     </picture>
+     <section>
+
+       <div class="newsletter-description">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+       </div>
+
+        <form id="form" novalidate>
+          <div class="form-label">
+          <label for="email">Email address</label>
+          <p id="warning-message">Valid email required</p>
+          </div>
+          <input class="email" type="email" name="email" id="email" value="email@company.com" /> 
+          <input class="btn btn-form" type="submit" value=" Subscribe to monthly newsletter"/>
+
+        </form>
+        
+     </section>
+
+  
+     
+ </main>
+
+</body>
+</html>
